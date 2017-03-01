@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 print_count(){
     keyword=$1
     url=$2
@@ -11,5 +12,3 @@ print_count(){
 }
 export -f print_count
 cat indeed_countries.txt | xargs -L 1 -I {} -P 4 bash -c "print_count $1 {}" | sort -nr
-
-
