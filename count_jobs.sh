@@ -6,8 +6,8 @@ print_count(){
     country=$4
     url_get="$url$action?q=$keyword&l="
     count=`curl -L -s $url_get \
-                 | sed -r -n 's/.*searchCount">(.*)<\/div>.*/\1/p' \
-                 | sed -r 's/1[^0-9]+([1-9]|10)//;s/[^0-9]//g'`
+           | sed -r -n 's/.*searchCount">(.*)<\/div>.*/\1/p' \
+           | sed -r 's/1[^0-9]+([1-9]|10)//;s/[^0-9]//g'`
     printf "%14u %-20s\n" "$count" $country
 }
 export -f print_count
