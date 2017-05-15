@@ -1,8 +1,8 @@
 ### Scraping the number of job offers by country
 
-It's a simple Bash script that allows you to query how many jobs are available by country using data from `indeed.com`.
+It's a simple Bash script that query how many jobs are available by country pulling data from `indeed.com`.
 
-To use, just type `./count_jobs.sh` followed by the keyword you want to query. Let's suppose that you want to know the 10 countries with most positions containing the phrase project manager, then:
+To use it, just type `./count_jobs.sh` followed by the keyword you want to query. Let's suppose that you want to know the 10 countries with most open positions containing the phrase project manager, then:
 
 ```bash
 $ ./count_jobs.sh project+manager | head
