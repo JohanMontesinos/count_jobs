@@ -6,7 +6,7 @@ print_count(){
     local action=$3
     local country=$4
     local url_get="${url}${action}?q=${keyword}&l="
-    local count=$(curl -L -s "$url_get" \
+    local count=$(curl -L -s "$url_get" \ #when proxy add the following commad in curl -x "http://userproxy:password@proxy.domanin:port"    
            | tr '\n' '\r'\
            | sed -r -n -n 's/.*searchCount">[\r ]*([^<]+)<\/div>.*/\1/p'\
 	   | sed -r 's/1[^0-9]+([1-9]|10)//;s/[^0-9]//g')
